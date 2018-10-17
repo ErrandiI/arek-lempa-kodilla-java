@@ -4,21 +4,23 @@ import java.util.Objects;
 
 public class Square implements Shape{
 
-    private Shape shapeName;
-    private double field;
+    private String shapeName;
+    private double width;
 
 
-    public Square(Shape shapeName, double field) {
+    public Square(String shapeName, double width) {
         this.shapeName = shapeName;
-        this.field = field;
+        this.width = width;
     }
+
     @Override
     public String getShapeName() {
-        return shapeName;
+        return this.shapeName;
     }
+
     @Override
-    public double getField() {
-        return field * field;
+    public double getShapeField() {
+        return width * width;
     }
 
     @Override
@@ -26,12 +28,20 @@ public class Square implements Shape{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Square square = (Square) o;
-        return Double.compare(square.field, field) == 0 &&
+        return Double.compare(square.width, width) == 0 &&
                 Objects.equals(shapeName, square.shapeName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(shapeName, field);
+        return Objects.hash(shapeName, width);
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "shapeName='" + shapeName + '\'' +
+                ", width=" + width +
+                '}';
     }
 }

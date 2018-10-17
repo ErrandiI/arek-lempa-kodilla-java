@@ -3,23 +3,27 @@ package com.kodilla.testing.shape;
 import java.util.ArrayList;
 
 public class ShapeCollector {
-    private ArrayList<Shape> shapes = new ArrayList<Shape>();
+    public ArrayList<Shape> shapes = new ArrayList<Shape>();
 
 
-    public void addFigure(Shape shape);{
-        // do nothing
+    public void addFigure(Shape shape){
+        shapes.add(shape);
     }
 
-    public void removeFigure(Shape shape);;{
-        // do nothing
+    public boolean removeFigure(Shape shape){
+        return shapes.remove(shape);
     }
 
-    public void getFigure(int n);{
-        // do nothing
+    public Shape getFigure(int n){
+        return shapes.get(n);
     }
 
-    public ArrayList<Shape> showFigures() {
-        return shapes;
+    public void showFigures() {
+        for (Shape shape: shapes) {
+            System.out.println(shapes);
+        }
     }
+
+
 }
 

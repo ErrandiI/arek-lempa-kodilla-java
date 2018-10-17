@@ -1,13 +1,8 @@
 package com.kodilla.testing.shape;
 
-interface Shape {
+public interface Shape {
 
-    String shapeName = !null;
+    String getShapeName();
 
-    public void getShapeName(){
-        // do nothing
-    }
-    public double getField(){
-        // do nothing
-    }
+    double getShapeField();
 }
