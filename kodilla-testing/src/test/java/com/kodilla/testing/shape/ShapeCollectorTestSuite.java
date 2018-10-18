@@ -1,12 +1,9 @@
-package com.kodilla.testing.forum.shape;
+package com.kodilla.testing.shape;
 
-import com.kodilla.testing.shape.*;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.*;
-
-import java.util.ArrayList;
 
 public class ShapeCollectorTestSuite {
     private static int testCounter = 0;

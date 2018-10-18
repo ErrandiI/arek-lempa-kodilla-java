@@ -1,5 +1,4 @@
-package com.kodilla.testing.forum;
-import com.kodilla.testing.collection.OddNumbersExterminator;
+package com.kodilla.testing.collection;
 import org.junit.*;
 
 import java.util.ArrayList;

@@ -7,7 +7,7 @@ public class WeatherForecastTestSuite {
     @Test
     public void testCalculateForecastWithStub(){
         //Given
-        Temperatures temperatures = new com.kodilla.testing.weather.stub.TemperaturesStub();
+        Temperatures temperatures = new TemperaturesStub();
         WeatherForecast weatherForecast = new WeatherForecast(temperatures);
 
         //When
