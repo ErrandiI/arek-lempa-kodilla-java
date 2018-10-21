@@ -61,7 +61,7 @@ public class StatisticsCounter {
         this.avgCommmentsPerPost = calculateAvgCommentsPerPost();
     }
 
-    public double calculateAvgPostPerUsers() {
+    private double calculateAvgPostPerUsers() {
         if (numberOfPosts > 0 && numberOfUsers > 0) {
             return numberOfUsers / numberOfPosts;
         } else {
@@ -69,7 +69,7 @@ public class StatisticsCounter {
         }
     }
 
-    public double calculateAvgCommentsPerUsers() {
+    private double calculateAvgCommentsPerUsers() {
         if (numberOfComments > 0 && numberOfUsers > 0) {
             return numberOfUsers / numberOfComments;
         } else {
@@ -77,7 +77,7 @@ public class StatisticsCounter {
         }
     }
 
-    public double calculateAvgCommentsPerPost() {
+    private double calculateAvgCommentsPerPost() {
         if (numberOfComments > 0 && numberOfPosts > 0) {
             return numberOfPosts / numberOfComments;
         } else {
