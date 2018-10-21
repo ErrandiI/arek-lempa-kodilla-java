@@ -1,20 +1,21 @@
 package com.kodilla.testing.forum.statistic;
 
-import com.kodilla.testing.statistics.Statistics;
+import com.kodilla.testing.forum.statistics.Statistics;
 
 import java.util.Objects;
 
 public class StatisticsCounter {
+    Statistics statistics;
     private int numberOfUsers;
     private int numberOfPosts;
     private int numberOfComments;
     private double avgPostsPerUser;
     private double avgCommentsPerUser;
     private double avgCommmentsPerPost;
-    private String counter;
 
-    public StatisticsCounter(String counter) {
-        this.counter = counter;
+
+    public StatisticsCounter(Statistics statistics) {
+        this.statistics = statistics;
         this.numberOfComments = 0;
         this.numberOfPosts = 0;
         this.numberOfUsers = 0;
@@ -23,8 +24,8 @@ public class StatisticsCounter {
         this.avgCommmentsPerPost = 0;
     }
 
-    public String getCounter() {
-        return counter;
+    public Statistics getStatistics() {
+        return statistics;
     }
 
     public int getNumberOfUsers() {
@@ -52,10 +53,45 @@ public class StatisticsCounter {
     }
 
     public void calculateAdvStatistics(Statistics statistics) {
+        this.numberOfComments = statistics.commentsCount();
+        this.numberOfPosts = statistics.postsCount();
+        this.numberOfUsers = statistics.usersNames().size();
+        this.avgPostsPerUser = calculateAvgPostPerUsers();
+        this.avgCommentsPerUser = calculateAvgCommentsPerUsers();
+        this.avgCommmentsPerPost = calculateAvgCommentsPerPost();
+    }
 
+    public double calculateAvgPostPerUsers() {
+        if (numberOfPosts > 0 && numberOfUsers > 0) {
+            return numberOfUsers / numberOfPosts;
+        } else {
+            return 0;
+        }
+    }
+
+    public double calculateAvgCommentsPerUsers() {
+        if (numberOfComments > 0 && numberOfUsers > 0) {
+            return numberOfUsers / numberOfComments;
+        } else {
+            return 0;
+        }
+    }
+
+    public double calculateAvgCommentsPerPost() {
+        if (numberOfComments > 0 && numberOfPosts > 0) {
+            return numberOfPosts / numberOfComments;
+        } else {
+            return 0;
+        }
     }
 
     public void showStatisctics() {
+        System.out.println("Liczba użytkowników " + numberOfUsers);
+        System.out.println("Liczba postów " + numberOfPosts);
+        System.out.println("Liczba komentarzy " + numberOfComments);
+        System.out.println("Srednia liczba postów na użytkownika " + avgPostsPerUser);
+        System.out.println("Srednia liczba komentarzy na użytkownika " + avgCommentsPerUser);
+        System.out.println("Srednia liczba komentarzy na post " + avgCommmentsPerPost);
 
     }
 
@@ -70,27 +106,24 @@ public class StatisticsCounter {
                 Double.compare(that.avgPostsPerUser, avgPostsPerUser) == 0 &&
                 Double.compare(that.avgCommentsPerUser, avgCommentsPerUser) == 0 &&
                 Double.compare(that.avgCommmentsPerPost, avgCommmentsPerPost) == 0 &&
-                Objects.equals(counter, that.counter);
+                Objects.equals(statistics, that.statistics);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberOfUsers, numberOfPosts, numberOfComments, avgPostsPerUser, avgCommentsPerUser, avgCommmentsPerPost, counter);
+        return Objects.hash(statistics, numberOfUsers, numberOfPosts, numberOfComments, avgPostsPerUser, avgCommentsPerUser, avgCommmentsPerPost);
     }
 
     @Override
     public String toString() {
         return "StatisticsCounter{" +
-                "numberOfUsers=" + numberOfUsers +
+                "statistics=" + statistics +
+                ", numberOfUsers=" + numberOfUsers +
                 ", numberOfPosts=" + numberOfPosts +
                 ", numberOfComments=" + numberOfComments +
                 ", avgPostsPerUser=" + avgPostsPerUser +
                 ", avgCommentsPerUser=" + avgCommentsPerUser +
                 ", avgCommmentsPerPost=" + avgCommmentsPerPost +
-                ", counter='" + counter + '\'' +
                 '}';
     }
-
-
-
 }
