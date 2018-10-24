@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-10-22T20:37:24" hostname="DESKTOP-AICCDSL" time="0.387">
+  <properties/>
+  <testcase name="calculateAdvStatisticsCommentsCountLowerThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.364"/>
+  <testcase name="calculateAdvStatisticsPostCount1000" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.011"/>
+  <testcase name="calculateAdvStatisticsUserCount100" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
+  <testcase name="calculateAdvStatisticsUserCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
+  <testcase name="calculateAdvStatisticsPostCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsCountHigherThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
+  <system-out><![CDATA[Test Suite: begin
+Preparing to execute test #1
+Test Case: begin
+Liczba uĹĽytkownikĂłw 0
+Liczba postĂłw 100
+Liczba komentarzy 50
+Srednia liczba postĂłw na uĹĽytkownika 0.0
+Srednia liczba komentarzy na uĹĽytkownika 0.0
+Srednia liczba komentarzy na post 2.0
+Test Case: end
+Preparing to execute test #2
+Test Case: begin
+Liczba uĹĽytkownikĂłw 1000
+Liczba postĂłw 1000
+Liczba komentarzy 1000
+Srednia liczba postĂłw na uĹĽytkownika 1.0
+Srednia liczba komentarzy na uĹĽytkownika 1.0
+Srednia liczba komentarzy na post 1.0
+Test Case: end
+Preparing to execute test #3
+Test Case: begin
+Liczba uĹĽytkownikĂłw 100
+Liczba postĂłw 100
+Liczba komentarzy 100
+Srednia liczba postĂłw na uĹĽytkownika 1.0
+Srednia liczba komentarzy na uĹĽytkownika 1.0
+Srednia liczba komentarzy na post 1.0
+Test Case: end
+Preparing to execute test #4
+Test Case: begin
+Liczba uĹĽytkownikĂłw 0
+Liczba postĂłw 100
+Liczba komentarzy 5
+Srednia liczba postĂłw na uĹĽytkownika 0.0
+Srednia liczba komentarzy na uĹĽytkownika 0.0
+Srednia liczba komentarzy na post 20.0
+Test Case: end
+Preparing to execute test #5
+Test Case: begin
+Liczba uĹĽytkownikĂłw 100
+Liczba postĂłw 0
+Liczba komentarzy 100
+Srednia liczba postĂłw na uĹĽytkownika 0.0
+Srednia liczba komentarzy na uĹĽytkownika 1.0
+Srednia liczba komentarzy na post 0.0
+Test Case: end
+Preparing to execute test #6
+Test Case: begin
+Liczba uĹĽytkownikĂłw 100
+Liczba postĂłw 100
+Liczba komentarzy 0
+Srednia liczba postĂłw na uĹĽytkownika 1.0
+Srednia liczba komentarzy na uĹĽytkownika 0.0
+Srednia liczba komentarzy na post 0.0
+Test Case: end
+Preparing to execute test #7
+Test Case: begin
+Liczba uĹĽytkownikĂłw 0
+Liczba postĂłw 450
+Liczba komentarzy 500
+Srednia liczba postĂłw na uĹĽytkownika 0.0
+Srednia liczba komentarzy na uĹĽytkownika 0.0
+Srednia liczba komentarzy na post 0.0
+Test Case: end
+Test Suite: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
