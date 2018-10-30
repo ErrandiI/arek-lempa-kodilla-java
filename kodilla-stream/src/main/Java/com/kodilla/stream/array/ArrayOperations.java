@@ -8,8 +8,10 @@ public interface ArrayOperations {
 
         double result = IntStream.range(0, numbers.length)
                 .map(n -> numbers[n])
-                .map(n -> {System.out.println(n);
-                return n;})
+                .map(n -> {
+                    System.out.println(n);
+                    return n;
+                })
                 .average().getAsDouble();
         return result;
     }

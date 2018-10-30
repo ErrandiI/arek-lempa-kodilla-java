@@ -14,7 +14,9 @@ public class StreamMain {
                 .filter(forumUser -> forumUser.getBirthDate().getYear() <= 2018-20)
                 .filter(forumUser -> forumUser.getPostCounter() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
-
-        System.out.println(forumMap);
+        for (Map.Entry<Integer, ForumUser> entry:forumMap.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+       // System.out.println(forumMap);
     }
 }
