@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challanges;
+package com.kodilla.good.patterns.challanges.module13FirstTask;
 
 import java.util.ArrayList;
 import java.util.HashMap;
