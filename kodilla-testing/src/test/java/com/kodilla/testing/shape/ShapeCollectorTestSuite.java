@@ -25,7 +25,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testAddAndGetFigure(){
+    public void testAddAndGetFigure() {
         //Given
         ShapeCollector sc = new ShapeCollector();
         //When
@@ -38,7 +38,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void removeFigure(){
+    public void removeFigure() {
         //Given
         ShapeCollector sc = new ShapeCollector();
         sc.addFigure(new Square("kwadrat", 5));

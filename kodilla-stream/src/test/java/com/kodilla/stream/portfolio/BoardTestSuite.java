@@ -2,6 +2,7 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -149,11 +150,11 @@ public class BoardTestSuite {
                 .filter(avereageDaysInProgress::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(t -> t.getCreated())
-                .mapToLong(d-> Period.between(d, LocalDate.now()).getDays())
+                .mapToLong(d -> Period.between(d, LocalDate.now()).getDays())
                 .average().getAsDouble();
 
         //Then
-        Assert.assertEquals(10,tasks, 0.01);
+        Assert.assertEquals(10, tasks, 0.01);
 
     }
 }

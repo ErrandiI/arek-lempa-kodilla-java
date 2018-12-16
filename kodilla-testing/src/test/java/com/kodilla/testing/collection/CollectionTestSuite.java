@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -6,15 +7,17 @@ import java.util.ArrayList;
 public class CollectionTestSuite {
 
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
+
     @Test
-    public void testOddNumbersExterminatorEmptyList(){
+    public void testOddNumbersExterminatorEmptyList() {
         //Given
 
         OddNumbersExterminator oddNumbersExterminator1 = new OddNumbersExterminator();
@@ -28,8 +31,9 @@ public class CollectionTestSuite {
         //Then
         Assert.assertEquals(myList2, resultList);
     }
+
     @Test
-    public void testOddNumbersExterminatorNormalList () {
+    public void testOddNumbersExterminatorNormalList() {
         //Given
 
         OddNumbersExterminator oddNumbersExterminator2 = new OddNumbersExterminator();

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-09T20:07:36" hostname="DESKTOP-AICCDSL" time="0.084">
-  <properties/>
-  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.084"/>
-  <system-out><![CDATA[1
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2018-12-09T20:07:36" hostname="DESKTOP-AICCDSL" time="0.084">
+    <properties/>
+    <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.084"/>
+    <system-out><![CDATA[1
 2
 3
 4
@@ -24,5 +25,5 @@
 20
 Srednia z tablicy[i] to 10.5
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

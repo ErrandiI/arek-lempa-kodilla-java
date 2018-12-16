@@ -11,9 +11,11 @@ public class OrderDto {
         this.product = product;
         this.isAvailable = isAvailable;
     }
+
     public User getUser() {
         return user;
     }
+
     public Product getProduct() {
         return product;
     }

@@ -16,15 +16,14 @@ import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class BookDirectoryTestSuite {
 
-        private List<Book> generateListOfNBooks(int booksQuantity) {
-            List<Book> resultList = new ArrayList<Book>();
-            for(int n = 1; n <= booksQuantity; n++){
-                Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
-                resultList.add(theBook);
-            }
-            return resultList;
+    private List<Book> generateListOfNBooks(int booksQuantity) {
+        List<Book> resultList = new ArrayList<Book>();
+        for (int n = 1; n <= booksQuantity; n++) {
+            Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
+            resultList.add(theBook);
         }
-
+        return resultList;
+    }
 
 
     @Test
@@ -119,7 +118,7 @@ public class BookDirectoryTestSuite {
         //When
         List<Book> resultListBooksInHandsOf = bookLibrary.listBooksInHandsOf(libraryUser);
         //Then
-        Assert.assertEquals(1,resultListBooksInHandsOf.size() );
+        Assert.assertEquals(1, resultListBooksInHandsOf.size());
     }
 
     @Test

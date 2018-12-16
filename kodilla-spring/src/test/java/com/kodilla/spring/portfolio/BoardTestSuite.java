@@ -13,8 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BoardTestSuite {
     @Autowired
     Board board;
+
     @Test
-    public void testTaskAdd(){
+    public void testTaskAdd() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.portfolio");
         Board board = context.getBean(Board.class);

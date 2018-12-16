@@ -14,7 +14,7 @@ public class WorldTestSuite {
         Country country = new Country("Polska", new BigDecimal("40000"));
         Country country1 = new Country("Niemcy", new BigDecimal("60000"));
         Country country2 = new Country("Meksyk", new BigDecimal("30000"));
-        Country country3= new Country("Canada", new BigDecimal("70000"));
+        Country country3 = new Country("Canada", new BigDecimal("70000"));
         Country country4 = new Country("Maroko", new BigDecimal("10000"));
 
         Continent continent = new Continent("Europe");

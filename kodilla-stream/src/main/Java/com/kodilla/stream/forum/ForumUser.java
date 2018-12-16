@@ -12,7 +12,7 @@ public final class ForumUser {
     private final Set<ForumUser> friends = new HashSet<>();
 
 
-    public ForumUser(final String username,final String realName,final String location) {
+    public ForumUser(final String username, final String realName, final String location) {
         this.username = username;
         this.realName = realName;
         this.location = location;
