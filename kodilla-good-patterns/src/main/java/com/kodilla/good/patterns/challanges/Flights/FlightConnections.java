@@ -11,6 +11,8 @@ public class FlightConnections {
         FlightConnections.add(new Flights("LON", "LAS"));
         FlightConnections.add(new Flights("BER", "WAW"));
         FlightConnections.add(new Flights("BER", "LON"));
+        FlightConnections.add(new Flights("WAW", "HAM"));
+        FlightConnections.add(new Flights("HAM", "LON"));
     }
     public List<Flights> getFlightsList() {
         return new ArrayList<>(FlightConnections);
