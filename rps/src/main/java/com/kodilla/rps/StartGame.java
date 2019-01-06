@@ -7,5 +7,7 @@ public class StartGame {
         userDialogs.nameSetter();
         userDialogs.roundsSetter();
         userDialogs.showSettledFields(userDialogs.getUserName(), userDialogs.getRoundsCount());
+        WinConditionCalculator.game(userDialogs.getRoundsCount());
+        UserDialogs.newGameAfterGame();
     }
 }
