@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class UserDialogs {
     private String username;
     private int roundsCount;
+    private int gameVersion;
 
     public String nameSetter(){
         System.out.println("Welcome to Rock, Paper, Scissors game!");
@@ -29,10 +30,28 @@ public class UserDialogs {
         return roundsCount;
     }
 
+    public int gameVersionSetter() {
+        Scanner gameVersionScanner = new Scanner(System.in);
+        while(true){
+            System.out.println("For standard game please set 0 or you can select expanded version with Spock and Lizard using 1");
+            Integer s = gameVersionScanner.nextInt();
+            switch (s) {
+                case 0:return gameVersion=0;
+                case 1:return gameVersion=1;
+                default:
+                    System.out.println("Wrong key, try again");
+            }
+        }
+    }
+
+    public int getGameVersion() {
+        return gameVersion;
+    }
+
     public static void showSettledFields(String username, int rounds){
         System.out.println("Welcome " + username+"!");
         System.out.println("You will play against computer for " + rounds +" rounds.");
-        System.out.println("To play use keys:\n 1 - Rock\n 2 - Paper\n 3 - Scissors\n Q - End game\n N - New game");
+        System.out.println("To play use keys:\n 1 - Rock\n 2 - Paper\n 3 - Scissors\n 4 - Lizard (expanded version)\n 5 - Spock (expanded version)\n Q - End game\n N - New game");
         System.out.println("Good luck!");
     }
 
@@ -50,6 +69,25 @@ public class UserDialogs {
                 default:
                     System.out.println("Wrong key, try again");
                     System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, Q - End game, N - New game");
+            }
+        }
+    }
+    public static UserSelection getUserSelectionExtended(){
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, 4 - Lizard (expanded version), 5 - Spock (expanded version), Q - End game, N - New game");
+            String s = sc.nextLine().toUpperCase();
+            switch (s){
+                case "1":return UserSelection.ROCK;
+                case "2":return UserSelection.PAPER;
+                case "3":return UserSelection.SCISSORS;
+                case "4":return UserSelection.LIZARD;
+                case "5":return UserSelection.SPOCK;
+                case "N":return UserSelection.NEW;
+                case "Q":return UserSelection.QUIT;
+                default:
+                    System.out.println("Wrong key, try again");
+                    System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, 4 - Lizard (expanded version), 5 - Spock (expanded version) Q - End game, N - New game");
             }
         }
     }
@@ -127,4 +165,6 @@ public class UserDialogs {
             }
         }
     }
+
+
 }
