@@ -6,6 +6,7 @@ public class UserDialogs {
     private String username;
     private int roundsCount;
     private int gameVersion;
+    private int difficultyLevel;
 
     public String nameSetter(){
         System.out.println("Welcome to Rock, Paper, Scissors game!");
@@ -46,6 +47,24 @@ public class UserDialogs {
 
     public int getGameVersion() {
         return gameVersion;
+    }
+
+    public int gameDifficultySetter() {
+        Scanner gameDifficultyScanner = new Scanner(System.in);
+        while(true){
+            System.out.println("Please select difficulty lvl 0 mean normal, 1 mean that computer will cheat you");
+            Integer s = gameDifficultyScanner.nextInt();
+            switch (s) {
+                case 0:return difficultyLevel=0;
+                case 1:return difficultyLevel=1;
+                default:
+                    System.out.println("Wrong key, try again");
+            }
+        }
+    }
+
+    public int getDifficultyLevel() {
+        return difficultyLevel;
     }
 
     public static void showSettledFields(String username, int rounds){
@@ -128,7 +147,6 @@ public class UserDialogs {
                     System.out.println("Wrong data");
             }
         }
-
     }
 
     public static void showMoves(UserSelection playerMove, UserSelection compMove, RoundResult roundResult){
@@ -165,6 +183,4 @@ public class UserDialogs {
             }
         }
     }
-
-
 }

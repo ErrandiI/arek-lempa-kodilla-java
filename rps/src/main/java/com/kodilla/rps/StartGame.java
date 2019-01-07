@@ -7,8 +7,9 @@ public class StartGame {
         userDialogs.nameSetter();
         userDialogs.roundsSetter();
         userDialogs.gameVersionSetter();
+        userDialogs.gameDifficultySetter();
         userDialogs.showSettledFields(userDialogs.getUserName(), userDialogs.getRoundsCount());
-        WinConditionCalculator.game(userDialogs.getRoundsCount(), userDialogs.getGameVersion());
+        WinConditionCalculator.game(userDialogs.getRoundsCount(), userDialogs.getGameVersion(), userDialogs.getDifficultyLevel());
         UserDialogs.newGameAfterGame();
     }
 }
