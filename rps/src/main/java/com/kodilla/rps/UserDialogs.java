@@ -3,68 +3,65 @@ package com.kodilla.rps;
 import java.util.Scanner;
 
 public class UserDialogs {
-    private String username;
-    private int roundsCount;
-    private int gameVersion;
-    private int difficultyLevel;
 
-    public String nameSetter(){
+    public static String getUserName(){
         System.out.println("Welcome to Rock, Paper, Scissors game!");
         System.out.println("Please enter your name:");
         Scanner userNameScan = new Scanner(System.in);
-        username = userNameScan.next();
-        return username;
+        return userNameScan.next();
     }
 
-    public String getUserName(){
-        return username;
-    }
-
-    public int roundsSetter(){
-        System.out.println("Please enter how many rounds you would like to play:");
+    public static int getRounds(){
         Scanner roundsScanner = new Scanner(System.in);
-        roundsCount = roundsScanner.nextInt();
-        return roundsCount;
+        while(true) {
+            System.out.println("Please enter how many rounds you would like to play:");
+            String s = roundsScanner.nextLine();
+            try {
+                return Integer.parseInt(s);
+            } catch (Exception e) {
+                System.out.println("Wrong data");
+            }
+        }
     }
 
-    public int getRoundsCount(){
-        return roundsCount;
-    }
-
-    public int gameVersionSetter() {
+    public static int getVersion() {
         Scanner gameVersionScanner = new Scanner(System.in);
         while(true){
             System.out.println("For standard game please set 0 or you can select expanded version with Spock and Lizard using 1");
-            Integer s = gameVersionScanner.nextInt();
-            switch (s) {
-                case 0:return gameVersion=0;
-                case 1:return gameVersion=1;
-                default:
-                    System.out.println("Wrong key, try again");
+            String s = gameVersionScanner.nextLine();
+            try {
+                switch (s) {
+                    case "0":
+                        return 0;
+                    case "1":
+                        return 1;
+                    default:
+                        System.out.println("Wrong key, try again");
+                }
+            } catch (Exception e){
+                System.out.println("Wrong data");
             }
         }
     }
 
-    public int getGameVersion() {
-        return gameVersion;
-    }
-
-    public int gameDifficultySetter() {
+    public static int getDifficulty() {
         Scanner gameDifficultyScanner = new Scanner(System.in);
         while(true){
             System.out.println("Please select difficulty lvl 0 mean normal, 1 mean that computer will cheat you");
-            Integer s = gameDifficultyScanner.nextInt();
-            switch (s) {
-                case 0:return difficultyLevel=0;
-                case 1:return difficultyLevel=1;
-                default:
-                    System.out.println("Wrong key, try again");
+            String s = gameDifficultyScanner.nextLine();
+            try {
+                switch (s) {
+                    case "0":
+                        return 0;
+                    case "1":
+                        return 1;
+                    default:
+                        System.out.println("Wrong key, try again");
+                }
+            } catch (Exception e) {
+                System.out.println("Wrong data");
             }
         }
-    }
-
-    public int getDifficultyLevel() {
-        return difficultyLevel;
     }
 
     public static void showSettledFields(String username, int rounds){
@@ -77,7 +74,7 @@ public class UserDialogs {
     public static UserSelection getUserSelection(){
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, Q - End game, N - New game");
+            System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, Q - End game , N - New game)");
             String s = sc.nextLine().toUpperCase();
             switch (s){
                 case "1":return UserSelection.ROCK;
@@ -87,14 +84,14 @@ public class UserDialogs {
                 case "Q":return UserSelection.QUIT;
                 default:
                     System.out.println("Wrong key, try again");
-                    System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, Q - End game, N - New game");
             }
         }
     }
+
     public static UserSelection getUserSelectionExtended(){
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, 4 - Lizard (expanded version), 5 - Spock (expanded version), Q - End game, N - New game");
+            System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, 4 - Lizard (expanded version), 5 - Spock (expanded version), Q - End game, N - New game)");
             String s = sc.nextLine().toUpperCase();
             switch (s){
                 case "1":return UserSelection.ROCK;
@@ -106,24 +103,21 @@ public class UserDialogs {
                 case "Q":return UserSelection.QUIT;
                 default:
                     System.out.println("Wrong key, try again");
-                    System.out.println("Please enter your move (1 - Rock, 2 - Paper, 3 - Scissors, 4 - Lizard (expanded version), 5 - Spock (expanded version) Q - End game, N - New game");
             }
         }
     }
 
-    public static void newGame(){
-        boolean end = false;
-        System.out.println("Do you really want to start a new game  Y/N ?");
-        while(!end) {
+    public static boolean newGame(){
+        System.out.println("Do you really want to start a new playOneGame  Y/N ?");
+        while(true) {
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine().toUpperCase();
             switch (s) {
                 case "Y":
-                    StartGame.startGame();
+                    return true;
                 case "N":
                     System.out.println("Greate, pick up your move!");
-                    end = true ;
-                    break;
+                    return false;
                 default:
                     System.out.println("Wrong data");
             }
@@ -166,18 +160,17 @@ public class UserDialogs {
         }
     }
 
-    public static void newGameAfterGame() {
-        boolean end = false;
-        System.out.println("Do you want to start a new game  Y/N ? " );
-        while(!end) {
+    public static boolean newGameAfterGame() {
+        System.out.println("Do you want to start a new playOneGame  Y/N ? " );
+        while(true) {
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine().toUpperCase();
             switch (s) {
                 case "Y":
-                    StartGame.startGame();
+                    return true;
                 case "N":
                     System.out.println("See you later ! :)");
-                    System.exit(0);
+                    return false;
                 default:
                     System.out.println("Wrong data");
             }

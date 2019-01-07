@@ -55,7 +55,6 @@ public class Computer {
                     computerMove = UserSelection.ROCK;
                 }
             }
-
         } else {
             int compMove = generator.nextInt(100);
             if (playerMove == UserSelection.PAPER) {
