@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="2" skipped="0" failures="0" errors="0"
-           timestamp="2018-10-22T20:37:24" hostname="DESKTOP-AICCDSL" time="0.018">
-    <properties/>
-    <testcase name="removeFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.016"/>
-    <testcase name="testAddAndGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
-    <system-out><![CDATA[This is the beginning of tests.
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-14T21:45:46" hostname="DESKTOP-AICCDSL" time="0.003">
+  <properties/>
+  <testcase name="removeFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
+  <testcase name="testAddAndGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <system-out><![CDATA[This is the beginning of tests.
 Preparing to execute test #1
 [Square{shapeName='kwadrat', width=5.0}, Triangle{shapeName='trĂłjkÄ…t', width=5.0, widthHigh=10.0}]
 [Square{shapeName='kwadrat', width=5.0}, Triangle{shapeName='trĂłjkÄ…t', width=5.0, widthHigh=10.0}]
@@ -13,5 +12,5 @@ Preparing to execute test #2
 [Circle{shapeName='koĹ‚o', r=5.0, Pi=3.14}]
 All tests are finished.
 ]]></system-out>
-    <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

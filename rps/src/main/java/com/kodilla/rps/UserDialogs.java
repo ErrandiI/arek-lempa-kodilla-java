@@ -161,7 +161,7 @@ public class UserDialogs {
     }
 
     public static boolean newGameAfterGame() {
-        System.out.println("Do you want to start a new playOneGame  Y/N ? " );
+        System.out.println("Do you want to start a new game Y/N ? " );
         while(true) {
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine().toUpperCase();
