@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-14T21:45:46" hostname="DESKTOP-AICCDSL" time="0.003">
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-02-03T14:33:56" hostname="DESKTOP-AICCDSL" time="0.006">
   <properties/>
-  <testcase name="removeFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
-  <testcase name="testAddAndGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="removeFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.004"/>
+  <testcase name="testAddAndGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
   <system-out><![CDATA[This is the beginning of tests.
 Preparing to execute test #1
 [Square{shapeName='kwadrat', width=5.0}, Triangle{shapeName='trĂłjkÄ…t', width=5.0, widthHigh=10.0}]

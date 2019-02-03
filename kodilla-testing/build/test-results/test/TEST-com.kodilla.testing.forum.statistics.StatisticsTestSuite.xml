@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-01-14T21:45:46" hostname="DESKTOP-AICCDSL" time="0.191">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-02-03T14:33:55" hostname="DESKTOP-AICCDSL" time="0.204">
   <properties/>
-  <testcase name="calculateAdvStatisticsCommentsCountLowerThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.178"/>
-  <testcase name="calculateAdvStatisticsPostCount1000" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
-  <testcase name="calculateAdvStatisticsUserCount100" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.004"/>
-  <testcase name="calculateAdvStatisticsUserCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsCountLowerThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.193"/>
+  <testcase name="calculateAdvStatisticsPostCount1000" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
+  <testcase name="calculateAdvStatisticsUserCount100" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsUserCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
   <testcase name="calculateAdvStatisticsPostCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
   <testcase name="calculateAdvStatisticsCommentsCount0" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
-  <testcase name="calculateAdvStatisticsCommentsCountHigherThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsCountHigherThanPostsCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.002"/>
   <system-out><![CDATA[Test Suite: begin
 Preparing to execute test #1
 Test Case: begin
