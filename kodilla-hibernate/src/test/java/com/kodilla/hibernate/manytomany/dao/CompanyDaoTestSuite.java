@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -17,6 +18,8 @@ import javax.transaction.Transactional;
 public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
+    @Autowired
+    EmployeeDao employeeDao;
 
     @Test
     public void testSaveManyToMany(){
@@ -63,4 +66,56 @@ public class CompanyDaoTestSuite {
         //    //do nothing
         //}
     }
+    @Test
+    public void testQueriesFindByString() {
+
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+
+        Company softwareMachines = new Company("Software Machines");
+
+        softwareMachines.getEmployees().add(johnSmith);
+
+        johnSmith.getCompanies().add(softwareMachines);
+
+        //When
+        employeeDao.save(johnSmith);
+        int johnSmithId = johnSmith.getId();
+
+        List<Employee> employeesWithLastName = employeeDao.retrieveEmployeesByLastname("Smith");
+
+        //Then
+        Assert.assertEquals(1, employeesWithLastName.size());
+
+        //CleanUp
+        employeeDao.delete(johnSmithId);
+
+    }
+
+    @Test
+    public void testQueriesFindBySSubstring() {
+
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+
+        Company softwareMachines = new Company("Software Machines");
+
+        softwareMachines.getEmployees().add(johnSmith);
+
+        johnSmith.getCompanies().add(softwareMachines);
+
+        //When
+        companyDao.save(softwareMachines);
+        int softwareMachinesId = softwareMachines.getId();
+
+        List<Company> companiesWithThreeFirsLetters = companyDao.retrieveCompaniesByFirstThreeLetters("Sof");
+
+        //Then
+        Assert.assertEquals(1, companiesWithThreeFirsLetters.size());
+
+        //CleanUp
+        companyDao.delete(softwareMachinesId);
+
+    }
+
 }
